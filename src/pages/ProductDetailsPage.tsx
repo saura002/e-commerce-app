@@ -31,7 +31,7 @@ const ProductDetailsPage: React.FC = () => {
   };
 
   if (loading) return <div className="text-center"><Spinner animation="border" /></div>;
-  if (!product) return <div>Product not found.</div>;
+  if (!product) return <div>Oops unable to find a product you searched. Please try something else!</div>;
 
   return (
     <ProductDetails product={product} onAddToCart={handleAddToCart} adding={adding} />

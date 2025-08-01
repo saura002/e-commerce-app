@@ -14,7 +14,7 @@ const CartTable: React.FC<CartTableProps> = ({ cart, onRemove, onUpdate, updatin
   return (
     <>
       {cart.length === 0 ? (
-        <div>Your cart is empty.</div>
+        <div>Opps, your cart is empty. Try adding some items in the cart</div>
       ) : (
         <Table striped bordered hover responsive className="align-middle text-center">
           <thead className="table-dark">
@@ -68,7 +68,9 @@ const CartTable: React.FC<CartTableProps> = ({ cart, onRemove, onUpdate, updatin
           </tbody>
         </Table>
       )}
-      <h4 className="text-end mt-3">Total: <span className="text-success">${total.toFixed(2)}</span></h4>
+      <h4 className="text-end mt-3">
+        Total: <span className="text-success">${total.toFixed(2)}</span>
+      </h4>
     </>
   );
 };
